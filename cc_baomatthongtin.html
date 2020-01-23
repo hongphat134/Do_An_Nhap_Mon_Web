@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"><!-- InstanceBegin template="/Templates/template_ThucAnNhanh.dwt" codeOutsideHTMLIsLocked="false" --> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <!-- InstanceBeginEditable name="doctitle" -->
+        <title>Chính sách bảo mật thông tin</title>
+        <!-- InstanceEndEditable -->
+        <!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- Stylesheets -->
+       
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/flaticon.css" />
+
+        <!-- Animate -->
+        <link rel="stylesheet" href="css/animate.css">
+        <!-- Bootsnav -->
+        <link rel="stylesheet" href="css/bootsnav.css">
+        <!-- Color style -->
+        <link rel="stylesheet" href="css/color.css">
+
+        <!-- Custom stylesheet -->
+        <link rel="stylesheet" href="css/custom.css" />
+        
+        
+        <!-- Favicon !-->
+        <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+        <!--[if lt IE 9]>
+                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+    <!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+    </head>
+    <body data-spy="scroll" data-target="#navbar-menu" data-offset="100" style="color:#FFF" onLoad="showClock(24);">
+    
+    
+    <img style="position:fixed;z-index:9999; top:0; left:0; width:170px; height:170px;" src="images/topleft.png" />
+    <img style="position:fixed;z-index:9999; top:0; right:0; width:170px; height:170px;" src="images/topright.png">
+    <img style="position:fixed;z-index:9999; bottom:0; left:0; width:200px; height:200px;" src="images/bottomleft.png">
+    
+    
+    <div id='closeit' style='border: 0 !important;'>
+<script type='text/javascript'>
+var textSpeed = 2;
+var contentWidth;
+var contentHeight;
+var xMax;
+var yMax;
+var xPos = 0;
+var yPos = 0;
+var xDir = 'right';
+var yDir = 'down';
+function initializeText()
+{
+if (typeof window.innerWidth != 'undefined')
+{
+xMax = window.innerWidth;
+yMax = window.innerHeight;
+}
+else
+if (typeof document.documentElement != 'undefined' && typeof document.documentElement.clientWidth != 'undefined' && document.documentElement.clientWidth != 0)
+{
+xMax = document.documentElement.clientWidth;
+yMax = document.documentElement.clientHeight;
+}
+else
+{
+xMax = document.getElementsByTagName('body')[0].clientWidth;
+yMax = document.getElementsByTagName('body')[0].clientHeight;
+}
+var supertext = document.getElementById('supertext');
+contentWidth = supertext.offsetWidth;
+contentHeight = supertext.offsetHeight;
+setTimeout('moveText()', 400);
+}
+function moveText()
+{
+var supertext = document.getElementById('supertext');
+calculatePosition();
+supertext.style.left = xPos + document.body.scrollLeft + "px";
+supertext.style.top = yPos + document.body.scrollTop + "px";
+animatetext = setTimeout('moveText()', 20);
+}
+function calculatePosition()
+{
+if (xDir == "right")
+{
+if (xPos > (xMax - contentWidth - textSpeed))
+{
+xDir = "left";
+}
+}
+else
+if (xDir == "left")
+{
+if (xPos < (0 + textSpeed))
+{
+xDir = "right";
+}
+}
+if (yDir == "down")
+{
+if (yPos > (yMax - contentHeight - textSpeed))
+{
+yDir = "up";
+}
+}
+else
+if (yDir == "up")
+{
+if (yPos < (0 + textSpeed))
+{
+yDir = "down";
+}
+}
+if (xDir == "right")
+{
+xPos = xPos + textSpeed;
+}
+else
+if (xDir == "left")
+{
+xPos = xPos - textSpeed;
+}
+else
+{
+xPos = xPos;
+}
+if (yDir == "down")
+{
+yPos = yPos + textSpeed;
+}
+else
+if (yDir == "up")
+{
+yPos = yPos - textSpeed;
+}
+else
+{
+yPos = yPos;
+}
+}
+setTimeout('initializeText()', 700);
+function closebandera(){
+div = document.getElementById('closeit');
+div.style.display='none';
+}
+setTimeout(closebandera, 13000);
+</script>
+<span id='supertext' style='position:absolute;left:0;top:0;color:#FF0;text-align:center;z-index:9999999999999'><b>MERRY CHRISTMAS!!!</b><BR></BR><img src='noel/Ong-gia-Noel.gif'/></span>
+</div>
+
+
+        <!-- Preloader --> 
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_four"></div>
+                    <div class="object" id="object_five"></div>
+                    <div class="object" id="object_six"></div>
+                    <div class="object" id="object_seven"></div>
+                    <div class="object" id="object_eight"></div>
+                    <div class="object" id="object_big"></div>
+                </div>
+            </div>
+        </div>
+        <!--End Preloader -->
+        <!-- Navbar -->
+        <nav class="navbar navbar-default bootsnav no-background navbar-fixed black">
+            <div class="container">  
+
+                <!-- Start Atribute Navigation -->
+                <div class="attr-nav">
+                    <ul>
+                        <li class="side-menu"><a href="#"><i class="fa fa-bars"></i></a></li>
+                    </ul>
+                </div>        
+                <!-- End Atribute Navigation -->
+
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html"><img src="images/200px-KFC_LOGO.png" alt="" width="106" height="107" class="logo"></a>
+                </div>
+                <!-- End Header Navigation -->
+            </div>   
+
+            <!-- Start Side Menu -->
+            <div class="side">
+                <a href="#" class="close-side"><i class="fa fa-times"></i></a>
+                <div class="widget">
+                    <h6 class="title">Menu</h6>
+                    <ul class="link">
+                        <li><a href="gioithieu_doan.html">Giới thiệu</a></li>
+                        <li><a href="thucdon_burger.html">Thực đơn</a></li>
+                        <li><a href="diadiembanhang.html">Địa điểm bán hàng</a></li>
+                        <li><a href="khuyenmai.html">Khuyến mãi</a></li>
+                        <li><a href="nghenghiep.html">Nghề nghiệp</a></li>
+                       
+                      <li><a href="thanhvien.html">Thành viên</a></li>
+                        	<li><a href="thanhtoan.html">Thanh toán</a></li>
+                        <li><a href="lab.html">Lab</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End Side Menu -->
+        </nav>
+
+        <!-- Header -->
+        <header id="hello">
+            <!-- Container -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="banner">
+                            <h3>-thức Ăn nhanh-</h3>
+                            
+                            
+                            
+
+                            <div class="inner_banner">
+                                <div class="banner_content">
+                                 
+                                <!-- Empty !--> 
+                                <div id="clock" style="background:url(images/digital-clock/cb.gif); width:220px; margin-top:50px; margin-left:40px;">
+	<table width="220" border="0" cellpadding="0" cellspacing="0" align="center">
+    	<tr>
+        	<td height="21"><img src="images/digital-clock/c0.gif" id="h1" name="h1" /></td>
+            <td height="21"><img src="images/digital-clock/c0.gif" id="h2" name="h2" /></td>
+            <td height="21"><img src="images/digital-clock/colon.gif" id="cc1" name="cc1" /></td>
+            <td height="21"><img src="images/digital-clock/c0.gif" id="m1" name="m1" /></td>
+            <td height="21"><img src="images/digital-clock/c0.gif" id="m2" name="m2" /></td>
+            <td height="21"><img src="images/digital-clock/colon.gif" id="cc2" name="cc2" /></td>
+            <td height="21"><img src="images/digital-clock/c0.gif" id="s1" name="s1" /></td>
+            <td height="21"><img src="images/digital-clock/c0.gif" id="s2" name="s2" /></td>
+            <td height="21"><img src="images/digital-clock/cam.gif" id="ap" name="ap" /></td>
+        </tr>
+        
+    </table>
+    <div id="date" style=" font-size:14px; margin-left:18px; "></div>
+</div>
+                                
+                                
+                                	
+                                </div>
+                                <div class="stamp">
+                                    <img src="images/stamp.png" alt="" />
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Container end -->
+            <p class="caption">*Limited Time Only</p>
+        </header>
+  
+        <!-- InstanceBeginEditable name="EditRegion1" -->
+			<style>
+		#cc_header{
+			margin-top:50px;
+			margin-bottom:50px;
+			color:#000;
+			text-align:center;
+			font-weight:bold;
+			text-shadow:2px 2px 2px #993333;
+		}
+		#cc_content{
+			color:#000;
+			margin-left:120px;
+			margin-right:120px;
+			background-color:#FFF;
+			width:1100px;
+			height:auto;
+			line-height:1.8;
+		}
+		[type=A]
+		{
+			font-weight:bold;
+			font-style:italic;
+			font-size:22px;
+		}
+		#frmat
+		{
+			margin-left:30px;
+		}
+		.format li p
+		{
+			font-style:normal;
+			font-weight:normal;
+			font-size:18px;
+			margin-right:60px;
+		}
+		
+		x{
+			text-decoration:underline;
+		}
+		</style>
+      
+       	 <div id="cc_header"><h2>CHÍNH SÁCH BẢO MẬT THÔNG TIN</h2>
+         </div>
+       	
+        <div id="cc_content">
+        	<ol type="A" id="frmat">
+            	<li><p>ĐỐI VỚI WEBSITE</p>
+                	<ol type="1" class="format">
+                    	<li><p><b>Mục đích và phạm vi thu thập</b></p>
+                        <p>KFC Việt Nam công nhận và tôn trọng thông tin bảo mật của các cá nhân đăng nhập vào website của KFC Việt Nam. Chính sách này bao gồm những thông tin cá nhân mà KFC Việt Nam và các đơn vị nhượng quyền đang nắm giữ và trình bày theo cách mà KFC Việt Nam và các đơn vị nhượng quyền muốn sử dụng, quản lý và bảo vệ thông tin cá nhân của khách hàng khi khách hàng đăng nhập vào website của KFC Việt Nam hoặc đặt hàng qua website của KFC Việt Nam.</p>
+                        <p>KFC Việt Nam có thể điều chỉnh chính sách bảo mật này bất cứ khi nào chúng tôi thấy cần thiết, vì vậy vui lòng truy cập vào website thường xuyên để cập nhật thông tin mới. Chính sách bảo mật thông tin này có hiệu lực kể từ tháng 01 năm 2015.</p>
+                        <p>KFC Việt Nam có thể thu thập thông tin cá nhân từ khách hàng bao gồm họ tên, địa chỉ, số điện thoại bàn và số điện thoại di động, địa chỉ email, nội dung thẻ tín dụng, và bất kỳ thông tin nào khác nếu bạn đồng ý cung cấp cho chúng tôi những thông tin này. Khi khách hàng sử dụng hệ thống đặt hàng qua mạng, khách hàng cần phải trả lời thêm những thông tin yêu cầu. Những thông tin này giúp cho việc phân phối sản phẩm đến nhà khách hàng nhanh chóng dễ dàng hơn. Hệ thống đặt hàng qua mạng cũng sẽ lưu trữ thông tin về đơn đặt hàng của khách giúp cho khách hàng ghi nhớ và đặt lại thực đơn cho lần mua hàng sau.</p>
+                        <p>Nếu KFC Việt Nam thu thập thông tin cá nhân của khách hàng từ người khác, KFC Việt Nam sẽ thực hiện các trình tự hợp lý để thông báo đến khách hàng.</p>
+                        <p>Khách hàng sẽ tự chịu trách nhiệm về bảo mật và lưu giữ mọi hoạt động sử dụng dịch vụ dưới tên đăng ký, mật khẩu và hộp thư điện tử của mình. Ngoài ra, khách hàng có trách nhiệm thông báo kịp thời cho webiste <x>kfcvietnam.com.vn</x> về những hành vi sử dụng trái phép, lạm dụng, vi phạm bảo mật, lưu giữ tên đăng ký và mật khẩu của bên thứ ba để có biện pháp giải quyết phù hợp.</p>
+                        </li>	
+                        
+                        <li><p><b>Phạm vi sử dụng thông tin</b></p>
+                        <p>KFC có thể sử dụng thông tin cá nhân do khách hàng cung cấp và xử lý những thông tin này để cung cấp hàng hóa và dịch vụ cho khách hàng. Thông thường, chúng tôi sẽ sử dụng những thông tin cá nhân này theo cách mà khách hàng mong muốn, bao gồm nhưng không giới hạn cho bất cứ mục đích nào như sau:</p>
+                        <p>- Giới thiệu và cung cấp các phần thức ăn nhanh, các chương trình khuyến mãi mới nhất đến khách hàng hoặc những thông tin về sản phẩm và dịch vụ mà KFC Việt Nam xét thấy có lợi cho khách hàng.</p>
+                        <p>- Xác nhận đơn hàng hoặc xác nhận tình trạng đăng ký khách hàng.</p>
+                        <p>- Gửi các thông báo về các hoạt động trao đổi thông tin giữa khách hàng và website <x>kfcvietnam.com.vn</x>.</p>
+                        <p>- Ngăn ngừa các hoạt động phá hủy tài khoản người dùng của khách hàng hoặc các hoạt động giả mạo khách hàng.</p>
+                        <p>- Liên lạc, cung cấp cho khách hàng bất cứ thông tin gì về công ty mà khách hàng yêu cầu và giải quyết với khách hàng trong những trường hợp đặc biệt.</p>
+                        <p>- Xác định số lượng khách hàng truy cập vào website của KFC Việt Nam.</p>
+                        <p>- Thông báo cho khách hàng biết những thay đổi trên website của KFC Việt Nam.</p>
+                        <p>- Quản lý chương trình nghiên cứu tiếp thị.</p>
+                        <p>- Không sử dụng thông tin cá nhân của khách hàng ngoài mục đích xác nhận và liên hệ có liên quan đến giao dịch tại <x>kfcvietnam.com.vn</x>.</p>
+                        </li>
+                    </ol>
+                </li>
+                
+                <li><p>ĐỐI VỚI ỨNG DỤNG “KFC VIETNAM”</p>
+                <ol type="1" class="format">
+                	<li><p><b>Mục đích và phạm vi thu thập</b></p>
+                    <p>KFC Việt Nam công nhận và tôn trọng thông tin bảo mật của các cá nhân đăng nhập vào ứng dụng của KFC Việt Nam. Chính sách này bao gồm những thông tin cá nhân mà KFC Việt Nam và các đơn vị nhượng quyền đang nắm giữ và trình bày theo cách mà KFC Việt Nam và các đơn vị nhượng quyền muốn sử dụng, quản lý và bảo vệ thông tin cá nhân của khách hàng khi khách hàng đăng nhập vào ứng dụng của KFC Việt Nam hoặc đặt hàng qua ứng dụng của KFC Việt Nam.</p>
+                    <p>KFC Việt Nam có thể điều chỉnh chính sách bảo mật này bất cứ khi nào chúng tôi thấy cần thiết, vì vậy vui lòng truy cập vào ứng dụng thường xuyên để cập nhật thông tin mới. Chính sách bảo mật thông tin này có hiệu lực kể từ tháng 09 năm 2018.</p>
+                    <p>* Những thông tin được thu thập trên thiết bị di động và/hoặc những tính năng của thiết bị di động được liên kết hoạt động khi khởi chạy ứng dụng:</p>
+                    <p>- Nhận dạng:</br>
+                    Sử dụng một hoặc nhiều: tài khoản trên thiết bị, dữ liệu tiểu sử</br>
+                    - Danh bạ:</br>
+                    Sử dụng thông tin liên hệ</br>
+
+- Vị trí:</br>
+
+Sử dụng vị trí của thiết bị</br>
+
+- Điện thoại:</br>
+
+Cho phép ứng dụng tạo và quản lý cuộc gọi điện thoại. Bạn có thể phải trả phí.</br>
+
+- Ảnh/phương tiện/tệp:</br>
+
+Sử dụng một hoặc nhiều trong số: các tệp trên thiết bị như hình ảnh, video hoặc âm thanh; bộ nhớ ngoài của thiết bị</br>
+
+- Máy ảnh:</br>
+
+Sử dụng máy ảnh của thiết bị
+                    </p>
+                    <p>Ngoài ra, ứng dụng KFC Việt Nam có thể thu thập thông tin cá nhân từ khách hàng bao gồm họ tên, địa chỉ, số điện thoại bàn và số điện thoại di động, địa chỉ email, nội dung thẻ tín dụng, và bất kỳ thông tin nào khác nếu bạn đồng ý cung cấp cho chúng tôi những thông tin này. Khi khách hàng sử dụng hệ thống đặt hàng qua mạng, khách hàng cần phải trả lời thêm những thông tin yêu cầu. Những thông tin này giúp cho việc phân phối sản phẩm đến nhà khách hàng nhanh chóng dễ dàng hơn. Hệ thống đặt hàng qua mạng cũng sẽ lưu trữ thông tin về đơn đặt hàng của khách giúp cho khách hàng ghi nhớ và đặt lại thực đơn cho lần mua hàng sau.</p>
+                    <p>Nếu KFC Việt Nam thu thập thông tin cá nhân của khách hàng từ người khác, KFC Việt Nam sẽ thực hiện các trình tự hợp lý để thông báo đến khách hàng.</p>
+                    <p>Khách hàng sẽ tự chịu trách nhiệm về bảo mật và lưu giữ mọi hoạt động sử dụng dịch vụ dưới tên đăng ký, mật khẩu và hộp thư điện tử của mình. Ngoài ra, khách hàng có trách nhiệm thông báo kịp thời cho ứng dụng KFC Vietnam về những hành vi sử dụng trái phép, lạm dụng, vi phạm bảo mật, lưu giữ tên đăng ký và mật khẩu của bên thứ ba để có biện pháp giải quyết phù hợp.</p>
+                    </li>
+                    
+                    <li><p><b>Phạm vi sử dụng thông tin</b></p>
+                    <p>KFC có thể sử dụng thông tin cá nhân do khách hàng cung cấp và xử lý những thông tin này để cung cấp hàng hóa và dịch vụ cho khách hàng. Thông thường, chúng tôi sẽ sử dụng những thông tin cá nhân này theo cách mà khách hàng mong muốn, bao gồm nhưng không giới hạn cho bất cứ mục đích nào như sau:</p>
+                    <p>- Giới thiệu và cung cấp các phần thức ăn nhanh, các chương trình khuyến mãi mới nhất đến khách hàng hoặc những thông tin về sản phẩm và dịch vụ mà KFC Việt Nam xét thấy có lợi cho khách hàng.</p>
+                    <p>- Xác nhận đơn hàng hoặc xác nhận tình trạng đăng ký khách hàng.</p>
+                    <p>- Gửi các thông báo về các hoạt động trao đổi thông tin giữa khách hàng và ứng dụng KFC Vietnam.</p>
+                    <p>- Ngăn ngừa các hoạt động phá hủy tài khoản người dùng của khách hàng hoặc các hoạt động giả mạo khách hàng.</p>
+                    <p>- Liên lạc, cung cấp cho khách hàng bất cứ thông tin gì về công ty mà khách hàng yêu cầu và giải quyết với khách hàng trong những trường hợp đặc biệt.</p>
+                    <p>- Xác định số lượng khách hàng truy cập vào ứng dụng của KFC Việt Nam.</p>
+                    <p>- Thông báo cho khách hàng biết những thay đổi trên ứng dụng của KFC Việt Nam.</p>
+                    <p>- Quản lý chương trình nghiên cứu tiếp thị.</p>
+                    
+                    <p>- Không sử dụng thông tin cá nhân của khách hàng ngoài mục đích xác nhận và liên hệ có liên quan đến giao dịch tại ứng dụng KFC Vietnam.</p>
+                    </li>
+                
+                </ol>
+                </li>
+                
+                <li><p> CÁC CHÍNH SÁCH CHUNG KHÁC</p>
+                <ol type="1" class="format">
+                	<li><p><b>Chia sẻ thông tin
+
+</b></p>
+						<p>KFC Việt Nam sẽ không cung cấp bất kỳ thông tin cá nhân nào của khách hàng cho bên thứ ba không liên quan để bên thứ ba có thể sử dụng những thông tin này tiếp thị trực tiếp đến khách hàng. KFC Việt Nam có thể sử dụng các công ty có liên quan để vận hành và bảo trì ứng dụng hoặc cho những mục đích khác có liên quan đến hoạt động kinh doanh, và những công ty này sẽ nhận thông tin của khách hàng để thực hiện những yêu cầu trên. KFC Việt Nam có quyền chia sẻ thông tin cá nhân của khách hàng trong một số trường hợp cơ quan chính phủ có yêu cầu về thông tin, phục vụ mục đích điều tra hoặc những yêu cầu khác theo quy định của pháp luật.</p>
+                        <p>Các thông tin cá nhân mà khách hàng đã đăng ký trên website hoặc ứng dụng của KFC Việt Nam có thể được chia sẻ cho bên thứ ba:</p>
+                        <p>- Những nhà cung cấp do chúng tôi thuê để cung cấp một số dịch vụ như gửi thư đến cho khách hàng.</p>
+                        <p>- Để đáp ứng mục đích của khách hàng khi đăng ký thông tin cá nhân.</p>
+                        <p>- Nếu khách hàng đồng ý chia sẻ những thông tin cá nhân này.</p>
+                        <p>- Nếu chính quyền yêu cầu chia sẻ những thông tin cá nhân này.</p>
+                        <p>- Nếu thông tin cá nhân của khách hàng do đơn vị tiếp thị thu thập thì sẽ được cung cấp cho đơn vị tiếp thị này với mục đích nghiên cứu & tiếp thị.</p>
+                    </li>
+                    
+                    <li><p><b>Thời gian lưu trữ thông tin</b></p>
+                    <p>Dữ liệu cá nhân của khách hàng sẽ được lưu trữ cho đến khi có yêu cầu hủy bỏ hoặc tự khách hàng đăng nhập và thực hiện hủy bỏ. Còn lại trong mọi trường hợp thông tin cá nhân khách hàng sẽ được bảo mật trên máy chủ của KFC Việt Nam.</p>
+                    <p>Khách hàng có quyền tự kiểm tra, cập nhật, điều chỉnh hoặc hủy bỏ thông tin cá nhân của mình bằng cách đăng nhập vào tài khoản và chỉnh sửa thông tin cá nhân hoặc yêu cầu KFC Việt Nam thực hiện việc này.</p>
+                    </li>
+                    
+                    <li><p><b>Địa chỉ của đơn vị thu thập và quản lý thông tin cá nhân</b></p>
+                    <p>- Công ty Liên Doanh TNHH KFC Việt Nam</p>
+                    <p>- Mã số thuế/ Số QĐ thành lập: 0100773885</p>
+                    <p>- Địa chỉ: 292 Bà Triệu– P. Lê Đại Hành – Q. Hai Bà Trưng – Hà Nội</p>
+
+<p>- Điện thoại: 028.38489828</p>
+
+<p>- Email: lienhe@kfcvietnam.com.vn</p>
+
+<p>Khách hàng có quyền gửi khiếu nại về đến ban quản trị website hoặc ứng dụng của KFC Việt Nam. Khi tiếp nhận những phản hồi này, KFC Việt Nam sẽ xác nhận lại thông tin, trường hợp đúng như phản ánh của khách hàng tùy theo mức độ, KFC Việt Nam sẽ có những biện pháp xử lý kịp thời.</p>
+                    </li>
+                    
+                    <li><p><b>Cam kết bảo mật thông tin cá nhân khách hàng</b></p>
+                    <p>Thông tin cá nhân của khách hàng trên KFC Việt Nam được KFC Việt Nam cam kết bảo mật tuyệt đối theo chính sách bảo vệ thông tin cá nhân của KFC Việt Nam. Việc thu thập và sử dụng thông tin của mỗi khách hàng chỉ được thực hiện khi có sự đồng ý của khách hàng đó trừ những trường hợp pháp luật có quy định khác.</p>
+
+<p>Không sử dụng, không chuyển giao, cung cấp hay tiết lộ cho bên thứ 3 nào về thông tin cá nhân của khách hàng khi không có sự cho phép đồng ý từ khách hàng.</p>
+
+<p>Trong trường hợp máy chủ lưu trữ thông tin bị hacker tấn công dẫn đến mất mát dữ liệu cá nhân khách hàng, KFC Việt Nam sẽ có trách nhiệm thông báo vụ việc cho cơ quan chức năng điều tra xử lý kịp thời và thông báo cho khách hàng được biết.</p>
+
+<p>Bảo mật tuyệt đối mọi thông tin đặt hàng trực tuyến của khách hàng bao gồm thông tin hóa đơn kế toán chứng từ số hóa trên <b>KFC Việt Nam.</b></p>
+
+<p>Ban quản lý KFC Việt Nam yêu cầu các cá nhân khi đăng ký/ mua hàng là khách hàng, phải cung cấp đầy đủ thông tin cá nhân có liên quan như: Họ và tên, địa chỉ liên lạc, email, điện thoại…và chịu trách nhiệm về tính pháp lý của những thông tin trên. Ban quản lý KFC Việt Nam không chịu trách nhiệm cũng như không giải quyết mọi khiếu nại có liên quan đến quyền lợi của khách hàng đó nếu xét thấy tất cả thông tin cá nhân của khách hàng đó cung cấp khi đăng ký ban đầu là không chính xác.</p>
+                    </li>
+                </ol>
+                </li>
+            </ol>
+        </div>
+		<!-- InstanceEndEditable -->
+        <!-- Block Content -->
+
+
+    <!-- Lock -->
+        <section id="lock">
+            <h2>PHỤC VỤ NHIỀU BURGERS HƠN TỪ NĂM 1998</h2>
+            <p>
+Kiểm tra giờ mở cửa và địa chỉ vị trí của chúng tôi bên dưới.</p>
+        </section>
+
+        <!-- Map -->
+        <div id="ourmaps"></div>
+
+        <!-- Footer -->
+        <footer>
+            <!-- Container -->
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-sm-4 col-xs-12 col-lg-offset-1 pull-right">
+                        <div class="subscribe">
+                            <h4 ><br>
+                            Theo dõi ngay  </h4>
+                            <p>Theo dõi các bản tin và nhận được một số công cụ giòn mỗi tuần.</p>
+
+                            <form role="form">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" id="em" placeholder="Enter your e-mail here">
+                                        <span class="input-group-btn">
+                                            <button type="submit" class="btn send_btn">
+                                                <i class="glyphicon glyphicon-send"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-4 col-xs-12 col-lg-offset-1 pull-right">
+                        <div class="contact_us">
+                            <h4>CHÍNH SÁCH :</h4>
+                            <a href="cc_quydinhchung.html"><b>QUY ĐỊNH CHUNG</b></a>
+                            <a href="cc_hoatdong.html"><b>HOẠT ĐỘNG</b></a>
+                              <a href="cc_baomatthongtin.html"><b>BẢO MẬT THÔNG TIN</b></a>
+                           <a href="cc_lienhe.html"><b>LIÊN HỆ</b></a></br>
+                           </br></br>Copyright &copy; 2018 STU Việt Nam
+                           
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-4 col-xs-12 pull-right">
+                        <div class="basic_info">
+                            <a href="index.html"><img class="footer_logo" src="images/200px-KFC_LOGO.png" alt="Burger" /></a>
+
+                            <ul class="list-inline social">
+                                <li><a href="https://www.facebook.com/KFCVietnam/" class="fa fa-facebook"></a></li>
+                                <li><a href="https://twitter.com/kfc" class="fa fa-twitter"></a></li>
+                                <li><a href="https://www.instagram.com/kfc/" class="fa fa-instagram"></a></li>
+                            </ul>
+
+                            <div class="footer-copyright">
+                                <p class="wow fadeInRight" data-wow-duration="1s">
+                                    đươc làm 
+                                    <i class="fa fa-heart"></i>
+                                    bởi 
+                                  <a target="_blank" href="http://bootstrapthemes.co">Bootstrap Themes</a> <br /> 
+                                    2016. Đã đăng ký bản quyền
+
+                              </p>
+                            </div>					
+                        </div>
+                    </div>
+
+                </div>
+            </div><!-- Container end -->
+        </footer><!-- Footer end -->
+
+
+        <!-- scroll up-->
+        <div class="scrollup" style="z-index:222222;">
+            <a href="#"><i class="fa fa-chevron-up"></i></a>
+        </div><!-- End off scroll up->
+
+        <!-- JavaScript -->
+        <script language="javascript" src="js/clock.js"></script>
+     
+		<!--   Javascrip Menu !-->
+        <script src="js/jquery-1.12.1.min.js"></script>		
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Bootsnav js -->
+        <script src="js/bootsnav.js"></script>
+
+        <!-- JS Implementing Plugins -->
+        <script src="js/google_map.js"></script>
+        <script src="js/gmaps.min.js"></script>
+		<script src="js/jquery.js"> </script>
+<script src="js/new-snofall.js"></script>
+        <script type="text/javascript">
+            var map;
+            $(document).ready(function () {
+                map = new GMaps({
+                    el: '#ourmaps',
+                    lat: 3.139003,
+                    lng: 101.686855,
+                    scrollwheel: false
+                });
+
+                //locations request
+                map.getElevations({
+                    locations: [[3.139003, 101.686855]],
+                    callback: function (result, status) {
+                        if (status == google.maps.ElevationStatus.OK) {
+                            for (var i in result) {
+                                map.addMarker({
+                                    lat: result[i].location.lat(),
+                                    lng: result[i].location.lng(),
+                                    infoWindow: {
+                                        content: '<address class="tooltip_address"><b>Junky Burger</b><br />Jalan Awan Hijau, Taman OUG<br />58200 Kuala Lumpur <br />Malaysia <br /></address>'
+                                    }
+                                });
+                            }
+                        }
+                    }
+                });
+
+            });
+			
+
+$(document).ready( function(){
+$.fn.snow({ minSize: 10, maxSize: 50, newOn: 400, flakeColor: '#ffffff' });
+});
+        </script>
+		
+
+        <!--main js-->
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>	
+<!-- InstanceEnd --></html>	

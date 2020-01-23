@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"><!-- InstanceBegin template="/Templates/template_ThucAnNhanh.dwt" codeOutsideHTMLIsLocked="false" --> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <!-- InstanceBeginEditable name="doctitle" -->
+        <title>Thực đơn Burger</title>
+        <!-- InstanceEndEditable -->
+        <!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- Stylesheets -->
+       
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/flaticon.css" />
+
+        <!-- Animate -->
+        <link rel="stylesheet" href="css/animate.css">
+        <!-- Bootsnav -->
+        <link rel="stylesheet" href="css/bootsnav.css">
+        <!-- Color style -->
+        <link rel="stylesheet" href="css/color.css">
+
+        <!-- Custom stylesheet -->
+        <link rel="stylesheet" href="css/custom.css" />
+        
+        
+        <!-- Favicon !-->
+        <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+        <!--[if lt IE 9]>
+                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+    <!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+    </head>
+    <body data-spy="scroll" data-target="#navbar-menu" data-offset="100" style="color:#FFF" onLoad="showClock(24);">
+    
+    
+    <img style="position:fixed;z-index:9999; top:0; left:0; width:170px; height:170px;" src="images/topleft.png" />
+    <img style="position:fixed;z-index:9999; top:0; right:0; width:170px; height:170px;" src="images/topright.png">
+    <img style="position:fixed;z-index:9999; bottom:0; left:0; width:200px; height:200px;" src="images/bottomleft.png">
+    
+    
+    <div id='closeit' style='border: 0 !important;'>
+<script type='text/javascript'>
+var textSpeed = 2;
+var contentWidth;
+var contentHeight;
+var xMax;
+var yMax;
+var xPos = 0;
+var yPos = 0;
+var xDir = 'right';
+var yDir = 'down';
+function initializeText()
+{
+if (typeof window.innerWidth != 'undefined')
+{
+xMax = window.innerWidth;
+yMax = window.innerHeight;
+}
+else
+if (typeof document.documentElement != 'undefined' && typeof document.documentElement.clientWidth != 'undefined' && document.documentElement.clientWidth != 0)
+{
+xMax = document.documentElement.clientWidth;
+yMax = document.documentElement.clientHeight;
+}
+else
+{
+xMax = document.getElementsByTagName('body')[0].clientWidth;
+yMax = document.getElementsByTagName('body')[0].clientHeight;
+}
+var supertext = document.getElementById('supertext');
+contentWidth = supertext.offsetWidth;
+contentHeight = supertext.offsetHeight;
+setTimeout('moveText()', 400);
+}
+function moveText()
+{
+var supertext = document.getElementById('supertext');
+calculatePosition();
+supertext.style.left = xPos + document.body.scrollLeft + "px";
+supertext.style.top = yPos + document.body.scrollTop + "px";
+animatetext = setTimeout('moveText()', 20);
+}
+function calculatePosition()
+{
+if (xDir == "right")
+{
+if (xPos > (xMax - contentWidth - textSpeed))
+{
+xDir = "left";
+}
+}
+else
+if (xDir == "left")
+{
+if (xPos < (0 + textSpeed))
+{
+xDir = "right";
+}
+}
+if (yDir == "down")
+{
+if (yPos > (yMax - contentHeight - textSpeed))
+{
+yDir = "up";
+}
+}
+else
+if (yDir == "up")
+{
+if (yPos < (0 + textSpeed))
+{
+yDir = "down";
+}
+}
+if (xDir == "right")
+{
+xPos = xPos + textSpeed;
+}
+else
+if (xDir == "left")
+{
+xPos = xPos - textSpeed;
+}
+else
+{
+xPos = xPos;
+}
+if (yDir == "down")
+{
+yPos = yPos + textSpeed;
+}
+else
+if (yDir == "up")
+{
+yPos = yPos - textSpeed;
+}
+else
+{
+yPos = yPos;
+}
+}
+setTimeout('initializeText()', 700);
+function closebandera(){
+div = document.getElementById('closeit');
+div.style.display='none';
+}
+setTimeout(closebandera, 13000);
+</script>
+<span id='supertext' style='position:absolute;left:0;top:0;color:#FF0;text-align:center;z-index:9999999999999'><b>MERRY CHRISTMAS!!!</b><BR></BR><img src='noel/Ong-gia-Noel.gif'/></span>
+</div>
+
+
+        <!-- Preloader --> 
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_four"></div>
+                    <div class="object" id="object_five"></div>
+                    <div class="object" id="object_six"></div>
+                    <div class="object" id="object_seven"></div>
+                    <div class="object" id="object_eight"></div>
+                    <div class="object" id="object_big"></div>
+                </div>
+            </div>
+        </div>
+        <!--End Preloader -->
+        <!-- Navbar -->
+        <nav class="navbar navbar-default bootsnav no-background navbar-fixed black">
+            <div class="container">  
+
+                <!-- Start Atribute Navigation -->
+                <div class="attr-nav">
+                    <ul>
+                        <li class="side-menu"><a href="#"><i class="fa fa-bars"></i></a></li>
+                    </ul>
+                </div>        
+                <!-- End Atribute Navigation -->
+
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html"><img src="images/200px-KFC_LOGO.png" alt="" width="106" height="107" class="logo"></a>
+                </div>
+                <!-- End Header Navigation -->
+            </div>   
+
+            <!-- Start Side Menu -->
+            <div class="side">
+                <a href="#" class="close-side"><i class="fa fa-times"></i></a>
+                <div class="widget">
+                    <h6 class="title">Menu</h6>
+                    <ul class="link">
+                        <li><a href="gioithieu_doan.html">Giới thiệu</a></li>
+                        <li><a href="thucdon_burger.html">Thực đơn</a></li>
+                        <li><a href="diadiembanhang.html">Địa điểm bán hàng</a></li>
+                        <li><a href="khuyenmai.html">Khuyến mãi</a></li>
+                        <li><a href="nghenghiep.html">Nghề nghiệp</a></li>
+                       
+                      <li><a href="thanhvien.html">Thành viên</a></li>
+                        	<li><a href="thanhtoan.html">Thanh toán</a></li>
+                        <li><a href="lab.html">Lab</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End Side Menu -->
+        </nav>
+
+        <!-- Header -->
+        <header id="hello">
+            <!-- Container -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="banner">
+                            <h3>-thức Ăn nhanh-</h3>
+                            
+                            
+                            
+
+                            <div class="inner_banner">
+                                <div class="banner_content">
+                                 
+                                <!-- Empty !--> 
+                                <div id="clock" style="background:url(images/digital-clock/cb.gif); width:220px; margin-top:50px; margin-left:40px;">
+	<table width="220" border="0" cellpadding="0" cellspacing="0" align="center">
+    	<tr>
+        	<td height="21"><img src="images/digital-clock/c0.gif" id="h1" name="h1" /></td>
+            <td height="21"><img src="images/digital-clock/c0.gif" id="h2" name="h2" /></td>
+            <td height="21"><img src="images/digital-clock/colon.gif" id="cc1" name="cc1" /></td>
+            <td height="21"><img src="images/digital-clock/c0.gif" id="m1" name="m1" /></td>
+            <td height="21"><img src="images/digital-clock/c0.gif" id="m2" name="m2" /></td>
+            <td height="21"><img src="images/digital-clock/colon.gif" id="cc2" name="cc2" /></td>
+            <td height="21"><img src="images/digital-clock/c0.gif" id="s1" name="s1" /></td>
+            <td height="21"><img src="images/digital-clock/c0.gif" id="s2" name="s2" /></td>
+            <td height="21"><img src="images/digital-clock/cam.gif" id="ap" name="ap" /></td>
+        </tr>
+        
+    </table>
+    <div id="date" style=" font-size:14px; margin-left:18px; "></div>
+</div>
+                                
+                                
+                                	
+                                </div>
+                                <div class="stamp">
+                                    <img src="images/stamp.png" alt="" />
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Container end -->
+            <p class="caption">*Limited Time Only</p>
+        </header>
+  
+        <!-- InstanceBeginEditable name="EditRegion1" -->
+       <style>
+	   	#thucdon_content
+		{
+			width:auto;
+			height:auto;
+			color:#000;
+		}
+		#thucdon_logo
+		{
+			
+			width:500px;
+			font-weight:bold;
+			font-size:36px;
+			margin:10px;
+			margin-left:400px;
+			padding:30px;
+			text-align:center;
+			border:8px;
+			border-bottom-color:#33C;
+			border-right-color:#9C3;
+			border-left-color:#F00;
+			border-top-color:#FF0;
+			border-style:groove;
+			background-color:#FFF;
+			color:#000;
+			border-radius:30px;
+		}
+		#gioithieu_content
+		{
+			width:1100px;
+			height:auto;
+			margin-left:120px;
+			margin-right:120px;
+			background-color:#FFF;	
+			color:#000;
+			font-weight:bold;
+			border-style:groove;
+			border-color:#FF0;
+			border-radius:25px;
+		}
+		#gioithieu_menu
+		{			
+		
+			padding-left:50px;
+			padding-right:50px;
+			margin-top:50px;
+		
+			height:100px;
+			width:1100px;			
+		}
+		#gioithieu_menu ul li{
+			list-style-type:none;
+			float:left;
+		}
+		#gioithieu_menu ul li a
+		{
+			padding:30px;
+			text-decoration:none;
+			color:#000;			
+			border-radius:50px;
+			
+		}
+		#gioithieu_menu ul li a:hover
+		{
+			color:#FFF;
+			background-color:#F00;
+		}
+		#content_item
+		{
+			margin:80px;
+		}
+		.item
+		{
+			width:300px;
+			height:400px;
+			display:inline-block;
+		
+		}
+		.hinh
+		{
+			background-repeat:round;
+			height:230px;
+			width:300px;
+		}
+		.ten
+		{
+			border-top:5px groove;
+			border-top-color:#F00;
+			font-weight:bold;
+			padding-top:20px;
+			padding-bottom:20px;
+			text-shadow:1px 1px 1px #F00;
+		}
+		
+		.gia
+		{
+			font-weight:bold;
+			color:#F00;
+			margin-top:18px;
+			margin-bottom:10px;
+			float:left;
+		}
+		.themgiohang
+		{
+			margin-top:10px;
+			margin-bottom:10px;
+
+			float:right;
+		}
+		
+		[type=button]
+		{
+			width:100px;
+			height:30px;
+			display:inline-block;
+		}
+		[type=button]:hover
+		{
+			background-color:#F00;
+			color:#FFF;
+			width:120px;
+			height:40px;
+		}
+		#thucdon_footer
+		{
+			margin:120px;
+			width:1200px;
+			height:400px;
+		}
+			
+		
+		#title_giohang
+		{
+			text-align:center;
+			color:#847676;
+			margin-bottom:20px;
+		}
+		#giohang
+		{
+			
+			height:200px;
+			width:350px;
+			padding:40px;
+			position:absolute;
+			right:0;
+			bottom:0;
+			
+			position:fixed;
+			z-index:99999;
+			background-color:#CCC;
+								
+		}
+		#left_giohang
+		{
+			width:135px;
+			float:left;
+			display:inline-block;
+		}
+		#soluongsanpham
+		{
+			color:#000;
+		}
+		#right_giohang{
+			width: 70px;
+			height: 70px;
+			margin-right:10px;
+			float:right;
+			
+			background:url(images/shoppingcart.png);
+			background-repeat:round;
+		
+		}	
+	   </style> 
+        <script src="js/jquery.elevatezoom.js"></script>
+	<script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.elevateZoom-3.0.8.min.js"></script>
+     <div id="giohang">
+                   			<div id="title_giohang"><h3>Giỏ hàng</h3></div>
+                   			<span id="left_giohang">
+        						<div id="soluongsanpham"></div>
+								<hr style="width:95%; border:2px dashed; border-color:#000;" align="left">
+            					<span id="thanhtien" style="color:#F00; font-weight:bold; font-size:16px;"></span>
+       						 </span>
+                        <span id="right_giohang">
+                        </span>
+                    </div>
+        <div id="thucdon_content" >
+         <img src="images/banner.png" />
+         	<div id="thucdon_logo">
+            THỰC ĐƠN
+          	</div>                        
+         </div>
+         
+         <!-- Menu !-->
+         <div id="gioithieu_content">
+         	 <div id="gioithieu_menu">           	
+                	<ul>
+                	  <li><a href="thucdon_burger.html">BURGER</a> </li>
+                       <li><a href="thucdon_combo.html">PHẦN ĂN COMBO</a> </li>
+                	  <li><a href="thucdon_garanquay.html">GÀ RÁN - QUAY</a></li>
+                	  <li><a href="thucdon_thucannhe.html">THỨC ĂN NHẸ</a></li>
+                	  <li><a href="thucdon_drink.html">THỨC UỐNG</a></li>
+                	  
+              	  </ul>
+           	</div>   
+            
+            <div id="content_item">
+            	<span class="item">
+                	  <div   class="hinh" style="background-image:url(images/classic_bg.jpg)" data-zoom-image="images/classic_bg.jpg">
+                    </div>
+                	
+                    
+                    <div class="ten">COMBO 99K</div>
+                    
+                      <div class="thanhtoan">
+                
+                	    <span class="gia">99.000 VNĐ</span>
+                        <span class="themgiohang">
+                        	<input type="button" value="Đặt mua" id="btn1" onClick="themgiohang(1)"  />
+                        </span> 
+                    </div>
+                </span>
+                
+                <span class="item">
+                	<div  class="hinh" style="background-image:url(images/small_slider_bg.jpg)" data-zoom-image="images/small_slider_bg.jpg">
+                    </div>
+                    
+                    <div class="ten">BURGER VEGGIE</div>
+                    
+                    <div class="thanhtoan">
+                
+                	    <span class="gia">59.000 VNĐ</span>
+                        <span class="themgiohang">
+                        	<input type="button" value="Đặt mua" id="btn2" onClick="themgiohang(2)" />
+                        </span> 
+                    </div>
+                </span>
+                
+                <span class="item">
+                	<div class="hinh" style="background-image:url(images/header_bg.jpg)" data-zoom-image="images/header_bg.jpg">
+                    </div>
+                        
+                        <div class="ten">BURGER BÒ & PHÔ MAI (LỚN)</div>
+                        
+                          <div class="thanhtoan">
+                
+                	    <span class="gia">89.000 VNĐ</span>
+                        <span class="themgiohang">
+                        	<input type="button" value="Đặt mua" id="btn3" onClick="themgiohang(3)" />
+                        </span> 
+                    </div> 
+                </span>
+                
+                <span class="item">
+                	<div class="hinh" style="background-image:url(images/feature_bg.jpg)" data-zoom-image="images/feature_bg.jpg" >
+                    </div>
+                  
+                        
+                        <div class="ten">KHOAI TÂY CHIÊN + BURGER</div>
+                        
+                          <div class="thanhtoan">
+                
+                	    <span class="gia">79.000 VNĐ</span>
+                        <span class="themgiohang">
+                        	<input type="button" value="Đặt mua" id="btn4" onClick="themgiohang(4)" />
+                        </span> 
+                    </div> 
+                </span>
+                
+                <span class="item">
+                	<div class="hinh" style="background-image:url(images/large_slider_img.jpg)" data-zoom-image="images/large_slider_img.jpg">
+                    </div>
+                    
+                    <div class="ten">BƠ-GƠ BÒ	 NHIỀU RAU</div>
+                    
+                      <div class="thanhtoan">
+                
+                	    <span class="gia">49.000 VNĐ</span>
+                        <span class="themgiohang">
+                        	<input type="button" value="Đặt mua" id="btn5" onClick="themgiohang(5)" />
+                        </span> 
+                    </div>
+                </span>
+                
+                <span class="item">
+                 	<div class="hinh" style="
+                    background-image:url(images/sign_bg.jpg)" data-zoom-image="images/sign_bg.jpg">
+                    </div>
+                    
+                    <div class="ten">BƠ-GƠ BÒ (LỚN)</div>
+                    
+                      <div class="thanhtoan">
+                
+                	    <span class="gia">69.000 VNĐ</span>
+                        <span class="themgiohang">
+                        	<input type="button" value="Đặt mua" id="btn6" onClick="themgiohang(6)" />
+                        </span> 
+                    </div> 
+                </span>
+            </div>
+         </div>
+         
+        <div id="thucdon_footer" >  
+        	
+	       	  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FKFCVietnam%2F%3Fref%3Dbr_rs&tabs=timeline&width=650&height=300&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="650" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media">
+    	      </iframe>    
+         </div>
+        <script>
+				$(".hinh").elevateZoom({
+  zoomType				: "lens",
+  lensShape : "round",
+  lensSize    : 200
+});
+			var soluongsanpham=0;
+			var tongtien=0;
+			function themgiohang(i)
+			{
+				soluongsanpham++;
+				document.getElementById('soluongsanpham').innerHTML=soluongsanpham+" sản phẩm ";
+				
+				if(i==1) tongtien+=99;
+				else if(i==2) tongtien+=59;
+				else if(i==3) tongtien+=89;
+				else if(i==4) tongtien+=79;
+				else if(i==5) tongtien+=49;
+				else 	tongtien+=69;
+				document.getElementById('thanhtien').innerHTML = tongtien + ".000 VNĐ ";
+				
+
+			}
+			
+			</script>
+        <!-- InstanceEndEditable -->
+        <!-- Block Content -->
+
+
+    <!-- Lock -->
+        <section id="lock">
+            <h2>PHỤC VỤ NHIỀU BURGERS HƠN TỪ NĂM 1998</h2>
+            <p>
+Kiểm tra giờ mở cửa và địa chỉ vị trí của chúng tôi bên dưới.</p>
+        </section>
+
+        <!-- Map -->
+        <div id="ourmaps"></div>
+
+        <!-- Footer -->
+        <footer>
+            <!-- Container -->
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-sm-4 col-xs-12 col-lg-offset-1 pull-right">
+                        <div class="subscribe">
+                            <h4 ><br>
+                            Theo dõi ngay  </h4>
+                            <p>Theo dõi các bản tin và nhận được một số công cụ giòn mỗi tuần.</p>
+
+                            <form role="form">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" id="em" placeholder="Enter your e-mail here">
+                                        <span class="input-group-btn">
+                                            <button type="submit" class="btn send_btn">
+                                                <i class="glyphicon glyphicon-send"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-4 col-xs-12 col-lg-offset-1 pull-right">
+                        <div class="contact_us">
+                            <h4>CHÍNH SÁCH :</h4>
+                            <a href="cc_quydinhchung.html"><b>QUY ĐỊNH CHUNG</b></a>
+                            <a href="cc_hoatdong.html"><b>HOẠT ĐỘNG</b></a>
+                              <a href="cc_baomatthongtin.html"><b>BẢO MẬT THÔNG TIN</b></a>
+                           <a href="cc_lienhe.html"><b>LIÊN HỆ</b></a></br>
+                           </br></br>Copyright &copy; 2018 STU Việt Nam
+                           
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-4 col-xs-12 pull-right">
+                        <div class="basic_info">
+                            <a href="index.html"><img class="footer_logo" src="images/200px-KFC_LOGO.png" alt="Burger" /></a>
+
+                            <ul class="list-inline social">
+                                <li><a href="https://www.facebook.com/KFCVietnam/" class="fa fa-facebook"></a></li>
+                                <li><a href="https://twitter.com/kfc" class="fa fa-twitter"></a></li>
+                                <li><a href="https://www.instagram.com/kfc/" class="fa fa-instagram"></a></li>
+                            </ul>
+
+                            <div class="footer-copyright">
+                                <p class="wow fadeInRight" data-wow-duration="1s">
+                                    đươc làm 
+                                    <i class="fa fa-heart"></i>
+                                    bởi 
+                                  <a target="_blank" href="http://bootstrapthemes.co">Bootstrap Themes</a> <br /> 
+                                    2016. Đã đăng ký bản quyền
+
+                              </p>
+                            </div>					
+                        </div>
+                    </div>
+
+                </div>
+            </div><!-- Container end -->
+        </footer><!-- Footer end -->
+
+
+        <!-- scroll up-->
+        <div class="scrollup" style="z-index:222222;">
+            <a href="#"><i class="fa fa-chevron-up"></i></a>
+        </div><!-- End off scroll up->
+
+        <!-- JavaScript -->
+        <script language="javascript" src="js/clock.js"></script>
+     
+		<!--   Javascrip Menu !-->
+        <script src="js/jquery-1.12.1.min.js"></script>		
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Bootsnav js -->
+        <script src="js/bootsnav.js"></script>
+
+        <!-- JS Implementing Plugins -->
+        <script src="js/google_map.js"></script>
+        <script src="js/gmaps.min.js"></script>
+		<script src="js/jquery.js"> </script>
+<script src="js/new-snofall.js"></script>
+        <script type="text/javascript">
+            var map;
+            $(document).ready(function () {
+                map = new GMaps({
+                    el: '#ourmaps',
+                    lat: 3.139003,
+                    lng: 101.686855,
+                    scrollwheel: false
+                });
+
+                //locations request
+                map.getElevations({
+                    locations: [[3.139003, 101.686855]],
+                    callback: function (result, status) {
+                        if (status == google.maps.ElevationStatus.OK) {
+                            for (var i in result) {
+                                map.addMarker({
+                                    lat: result[i].location.lat(),
+                                    lng: result[i].location.lng(),
+                                    infoWindow: {
+                                        content: '<address class="tooltip_address"><b>Junky Burger</b><br />Jalan Awan Hijau, Taman OUG<br />58200 Kuala Lumpur <br />Malaysia <br /></address>'
+                                    }
+                                });
+                            }
+                        }
+                    }
+                });
+
+            });
+			
+
+$(document).ready( function(){
+$.fn.snow({ minSize: 10, maxSize: 50, newOn: 400, flakeColor: '#ffffff' });
+});
+        </script>
+		
+
+        <!--main js-->
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>	
+<!-- InstanceEnd --></html>	

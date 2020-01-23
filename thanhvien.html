@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"><!-- InstanceBegin template="/Templates/template_ThucAnNhanh.dwt" codeOutsideHTMLIsLocked="false" --> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <!-- InstanceBeginEditable name="doctitle" -->
+        <title>Thành viên</title>
+        <!-- InstanceEndEditable -->
+        <!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- Stylesheets -->
+       
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/flaticon.css" />
+
+        <!-- Animate -->
+        <link rel="stylesheet" href="css/animate.css">
+        <!-- Bootsnav -->
+        <link rel="stylesheet" href="css/bootsnav.css">
+        <!-- Color style -->
+        <link rel="stylesheet" href="css/color.css">
+
+        <!-- Custom stylesheet -->
+        <link rel="stylesheet" href="css/custom.css" />
+        
+        
+        <!-- Favicon !-->
+        <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+        <!--[if lt IE 9]>
+                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+    <!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+    </head>
+    <body data-spy="scroll" data-target="#navbar-menu" data-offset="100" style="color:#FFF" onLoad="showClock(24);">
+    
+    
+    <img style="position:fixed;z-index:9999; top:0; left:0; width:170px; height:170px;" src="images/topleft.png" />
+    <img style="position:fixed;z-index:9999; top:0; right:0; width:170px; height:170px;" src="images/topright.png">
+    <img style="position:fixed;z-index:9999; bottom:0; left:0; width:200px; height:200px;" src="images/bottomleft.png">
+    
+    
+    <div id='closeit' style='border: 0 !important;'>
+<script type='text/javascript'>
+var textSpeed = 2;
+var contentWidth;
+var contentHeight;
+var xMax;
+var yMax;
+var xPos = 0;
+var yPos = 0;
+var xDir = 'right';
+var yDir = 'down';
+function initializeText()
+{
+if (typeof window.innerWidth != 'undefined')
+{
+xMax = window.innerWidth;
+yMax = window.innerHeight;
+}
+else
+if (typeof document.documentElement != 'undefined' && typeof document.documentElement.clientWidth != 'undefined' && document.documentElement.clientWidth != 0)
+{
+xMax = document.documentElement.clientWidth;
+yMax = document.documentElement.clientHeight;
+}
+else
+{
+xMax = document.getElementsByTagName('body')[0].clientWidth;
+yMax = document.getElementsByTagName('body')[0].clientHeight;
+}
+var supertext = document.getElementById('supertext');
+contentWidth = supertext.offsetWidth;
+contentHeight = supertext.offsetHeight;
+setTimeout('moveText()', 400);
+}
+function moveText()
+{
+var supertext = document.getElementById('supertext');
+calculatePosition();
+supertext.style.left = xPos + document.body.scrollLeft + "px";
+supertext.style.top = yPos + document.body.scrollTop + "px";
+animatetext = setTimeout('moveText()', 20);
+}
+function calculatePosition()
+{
+if (xDir == "right")
+{
+if (xPos > (xMax - contentWidth - textSpeed))
+{
+xDir = "left";
+}
+}
+else
+if (xDir == "left")
+{
+if (xPos < (0 + textSpeed))
+{
+xDir = "right";
+}
+}
+if (yDir == "down")
+{
+if (yPos > (yMax - contentHeight - textSpeed))
+{
+yDir = "up";
+}
+}
+else
+if (yDir == "up")
+{
+if (yPos < (0 + textSpeed))
+{
+yDir = "down";
+}
+}
+if (xDir == "right")
+{
+xPos = xPos + textSpeed;
+}
+else
+if (xDir == "left")
+{
+xPos = xPos - textSpeed;
+}
+else
+{
+xPos = xPos;
+}
+if (yDir == "down")
+{
+yPos = yPos + textSpeed;
+}
+else
+if (yDir == "up")
+{
+yPos = yPos - textSpeed;
+}
+else
+{
+yPos = yPos;
+}
+}
+setTimeout('initializeText()', 700);
+function closebandera(){
+div = document.getElementById('closeit');
+div.style.display='none';
+}
+setTimeout(closebandera, 13000);
+</script>
+<span id='supertext' style='position:absolute;left:0;top:0;color:#FF0;text-align:center;z-index:9999999999999'><b>MERRY CHRISTMAS!!!</b><BR></BR><img src='noel/Ong-gia-Noel.gif'/></span>
+</div>
+
+
+        <!-- Preloader --> 
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_four"></div>
+                    <div class="object" id="object_five"></div>
+                    <div class="object" id="object_six"></div>
+                    <div class="object" id="object_seven"></div>
+                    <div class="object" id="object_eight"></div>
+                    <div class="object" id="object_big"></div>
+                </div>
+            </div>
+        </div>
+        <!--End Preloader -->
+        <!-- Navbar -->
+        <nav class="navbar navbar-default bootsnav no-background navbar-fixed black">
+            <div class="container">  
+
+                <!-- Start Atribute Navigation -->
+                <div class="attr-nav">
+                    <ul>
+                        <li class="side-menu"><a href="#"><i class="fa fa-bars"></i></a></li>
+                    </ul>
+                </div>        
+                <!-- End Atribute Navigation -->
+
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html"><img src="images/200px-KFC_LOGO.png" alt="" width="106" height="107" class="logo"></a>
+                </div>
+                <!-- End Header Navigation -->
+            </div>   
+
+            <!-- Start Side Menu -->
+            <div class="side">
+                <a href="#" class="close-side"><i class="fa fa-times"></i></a>
+                <div class="widget">
+                    <h6 class="title">Menu</h6>
+                    <ul class="link">
+                        <li><a href="gioithieu_doan.html">Giới thiệu</a></li>
+                        <li><a href="thucdon_burger.html">Thực đơn</a></li>
+                        <li><a href="diadiembanhang.html">Địa điểm bán hàng</a></li>
+                        <li><a href="khuyenmai.html">Khuyến mãi</a></li>
+                        <li><a href="nghenghiep.html">Nghề nghiệp</a></li>
+                       
+                      <li><a href="thanhvien.html">Thành viên</a></li>
+                        	<li><a href="thanhtoan.html">Thanh toán</a></li>
+                        <li><a href="lab.html">Lab</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End Side Menu -->
+        </nav>
+
+        <!-- Header -->
+        <header id="hello">
+            <!-- Container -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="banner">
+                            <h3>-thức Ăn nhanh-</h3>
+                            
+                            
+                            
+
+                            <div class="inner_banner">
+                                <div class="banner_content">
+                                 
+                                <!-- Empty !--> 
+                                <div id="clock" style="background:url(images/digital-clock/cb.gif); width:220px; margin-top:50px; margin-left:40px;">
+	<table width="220" border="0" cellpadding="0" cellspacing="0" align="center">
+    	<tr>
+        	<td height="21"><img src="images/digital-clock/c0.gif" id="h1" name="h1" /></td>
+            <td height="21"><img src="images/digital-clock/c0.gif" id="h2" name="h2" /></td>
+            <td height="21"><img src="images/digital-clock/colon.gif" id="cc1" name="cc1" /></td>
+            <td height="21"><img src="images/digital-clock/c0.gif" id="m1" name="m1" /></td>
+            <td height="21"><img src="images/digital-clock/c0.gif" id="m2" name="m2" /></td>
+            <td height="21"><img src="images/digital-clock/colon.gif" id="cc2" name="cc2" /></td>
+            <td height="21"><img src="images/digital-clock/c0.gif" id="s1" name="s1" /></td>
+            <td height="21"><img src="images/digital-clock/c0.gif" id="s2" name="s2" /></td>
+            <td height="21"><img src="images/digital-clock/cam.gif" id="ap" name="ap" /></td>
+        </tr>
+        
+    </table>
+    <div id="date" style=" font-size:14px; margin-left:18px; "></div>
+</div>
+                                
+                                
+                                	
+                                </div>
+                                <div class="stamp">
+                                    <img src="images/stamp.png" alt="" />
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Container end -->
+            <p class="caption">*Limited Time Only</p>
+        </header>
+  
+        <!-- InstanceBeginEditable name="EditRegion1" -->
+        <style>
+		#content{
+			color:#000;
+			height:1100px;
+		}
+		#banner
+		{
+			width:auto;
+			height:300px;
+			background-image:url(images/banner.png);
+			background-repeat:round;
+		}
+		#title
+		{
+			margin-top:50px;
+			text-align:center;
+		}
+		#form
+		{
+			margin-left:300px;
+			margin-right:300px;
+			margin-top:75px;
+			width:800px;
+		
+			height:1000px;
+			font-size:20px;
+		}
+		.value
+		{
+			padding:20px;
+			height:50px;
+			display:inline-block;
+		}
+		.name{
+			width:300px;
+			
+			display:inline-block;
+		}
+		.text{
+			width;450px;
+		
+		}
+		.form_footer
+		{
+			margin-left:20px;
+			margin-right:20px;
+			margin-top:30px;
+		}
+		[type=text],[type=password],[type=email],[type=submit],[type=date]
+		{
+			height:35px;
+			border-radius:5px;
+		
+			width:400px;
+		}
+		[type=submit]
+		{
+			font-weight:bold;
+			background-color:#F00;
+			color:#FFF;
+		}
+		[type=radio]
+		{
+			
+		}
+		#footer_thanhvien
+		{
+			margin:50px;
+			width:auto;
+			height:350px;
+			background-color:#903;
+			
+		}
+		#video
+		{
+			float:left;
+			display:inline-block;
+			
+			background-color:#0FF;
+			width:600px;
+			height:350px;
+			
+		}
+		#aloha
+		{			
+			float:right;
+			width:600px;
+			height:350px;
+			background-color:#09C;
+			opacity:0.3;
+			
+		}
+		#js
+		{
+			
+			height:100px;
+			width:600px;
+			font-size:36px;
+			padding:40px;
+			margin-top:120px;
+			background-color:#F00;
+			text-shadow:4px 4px 4px #FFFF00;
+			
+		}
+		z
+		{
+			color:#F00;
+		}
+		[placeholder]
+		{
+			font-style:italic;
+			font-size:13px;
+		}
+		</style>
+       
+          <script>	  	
+					function kiemtra_hoten()//kt ho_ten co du 10 ki tu -> ko?
+					{
+						
+						if(document.getElementById('hoten').value.length<10)
+						{									
+							alert("họ tên phải lớn hơn 10 kí tự !");
+							hoten.style.backgroundColor="red";				
+							hoten.focus();						
+						}else
+						{
+							hoten.style.backgroundColor="white";							
+						}
+					}	
+					function kiemtra_matkhau()//kt mat khau co ca chu va so khong?
+					{
+						var kt1=0,kt2=0;
+						var a=document.getElementById('matkhau').value;
+						for(i=0;i<a.length;i++)
+						{
+							if(a[i]>='a'&&a[i]<='z'||a[i]>='A'&&a[i]<='Z')
+							{
+								 kt1=1;
+							}
+							if(a[i]>='0'&&a[i]<='9')
+							{
+								kt2=1;
+							}
+							if(kt1==1&&kt2==1)
+							{
+								break;
+							}
+						}
+						if(kt1==1&&kt2==1){
+							matkhau.style.backgroundColor="white";
+						}
+						else
+						{
+							alert("Mật khẩu phải cả kí tự chữ và số !");
+							matkhau.style.backgroundColor="red";				
+							matkhau.focus();	
+						}
+					}
+					function kiemtra_laplaimatkhau()
+					{
+						if(document.getElementById('laplaimatkhau').value!=document.getElementById('matkhau').value)
+						{
+							alert("Mật khẩu nhập lại không trùng khớp !");
+						
+							laplaimatkhau.style.backgroundColor="red";				
+							laplaimatkhau.focus();
+						}
+						else laplaimatkhau.style.backgroundColor="white";
+					}
+					function kiemtra_sdt()
+					{
+						if(document.getElementById('dienthoai').value<=10||isNaN(document.getElementById('dienthoai').value))
+						{
+							alert("Số điện thoại không hợp lệ !");
+							dienthoai.style.backgroundColor="red";
+							dienthoai.focus();
+						}
+						else dienthoai.style.backgroundColor="white";
+					}
+		  </script>
+        
+        <div id="content">
+			<div id="banner" >
+        	</div>
+            <div id="title"><h2><strong>đăng ký thành viên</strong></h2>
+            </br>Vui lòng điền đầy đủ thông tin cá nhân bên dưới.
+            </div>
+            
+            <div id="form">
+            	<form target="_blank" method="get" action="" enctype="multipart/form-data"  >
+                	<div class="value">
+                    	<span class="name">Họ và tên <z>(*)</z> :</span>
+                        <span class="text">
+                        	<input type="text" name="hoten" id="hoten" onChange="kiemtra_hoten()"  placeholder="Điền thông tin tại đây !"/>
+                        </span>
+                    </div>
+                    
+                    <div class="value">
+                    	<span class="name">Email <z>(*)</z> :</span>
+                        <span class="text">
+                        	<input type="email" name="thudientu" id="thudientu" placeholder="Điền thông tin tại đây !"/>
+                        </span>
+                    </div>
+                    
+                 	 <div class="value">
+                    	<span class="name">Mật khẩu <z>(*)</z> :</span>
+                        <span class="text">
+                        	<input type="password" name="matkhau" id="matkhau" onChange="kiemtra_matkhau()" placeholder="Điền thông tin tại đây !"/>
+                        </span>
+                    </div>
+                    
+                     <div class="value">
+                    	<span class="name">Lặp lại mật khẩu <z>(*)</z> :</span>
+                        <span class="text">
+                        	<input type="password" name="matkhau" id="laplaimatkhau" onchange="kiemtra_laplaimatkhau()" placeholder="Điền thông tin tại đây !" />
+                        </span>
+                    </div>
+                    
+                    <div class="value">
+                    	<span class="name">Giới tính <z>(*)</z> :</span>
+                        <span class="text">
+                        	<input type="radio" name="gioitinh"  checked /> Nam
+                            <input type="radio" name="gioitinh"  /> Nữ 
+                        </span>
+                    </div>
+                    
+                    <div class="value">
+                    	<span class="name">Ngày sinh <z>(*)</z> :</span>
+                        <span class="text">
+                        	<input type="date" placeholder/>
+                        </span>
+                    </div>
+                    
+                    <div class="value">
+                    	<span class="name">Điện thoại <z>(*)</z> :</span>
+                        <span class="text">
+                        	<input type="text" id="dienthoai" name="dienthoai" onChange="kiemtra_sdt()" maxlength="11" placeholder="Điền thông tin tại đây !" />
+                        </span>
+                    </div>
+                    
+                      <div class="value">
+                    	<span class="name"><z>(*)</z>Thông tin bắt buộc :</span>
+                        <span class="text">
+                        	<input  type="submit" value="ĐĂNG KÝ" />
+                        </span>
+                    </div>
+                    
+                    <div class="form_footer">
+                    	<input type="checkbox" />Tôi đồng ý với các <b><z>Chính Sách Và Quy Định</z></b> Chung của KFC Vietnam
+                    </div>
+                    
+                    <div class="form_footer">
+                    	<input type="checkbox" />Nhận tin từ KFC qua email.
+                    </div>
+                    
+                    <div class="form_footer">
+                    Hệ thống sẽ không đăng bài viết hoặc chia sẻ thông tin mà chưa được sự đồng ý của bạn.
+                    </div>
+                    
+         		</form>
+              
+            </div>
+                      
+        </div>
+        
+        <div id="footer_thanhvien">
+          	   <span id="video">
+               		<iframe width="560" height="315" src="https://www.youtube.com/embed/7pBKlG-zFEU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+               </span>
+               
+               <span id="aloha" style="color:#000;">
+	               <div id="js"  ><b>Ngon - Bổ - Rẻ - Chất lượng</b> </div>
+               </span>
+          </div>
+        
+		<!-- InstanceEndEditable -->
+        <!-- Block Content -->
+
+
+    <!-- Lock -->
+        <section id="lock">
+            <h2>PHỤC VỤ NHIỀU BURGERS HƠN TỪ NĂM 1998</h2>
+            <p>
+Kiểm tra giờ mở cửa và địa chỉ vị trí của chúng tôi bên dưới.</p>
+        </section>
+
+        <!-- Map -->
+        <div id="ourmaps"></div>
+
+        <!-- Footer -->
+        <footer>
+            <!-- Container -->
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-sm-4 col-xs-12 col-lg-offset-1 pull-right">
+                        <div class="subscribe">
+                            <h4 ><br>
+                            Theo dõi ngay  </h4>
+                            <p>Theo dõi các bản tin và nhận được một số công cụ giòn mỗi tuần.</p>
+
+                            <form role="form">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" id="em" placeholder="Enter your e-mail here">
+                                        <span class="input-group-btn">
+                                            <button type="submit" class="btn send_btn">
+                                                <i class="glyphicon glyphicon-send"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-4 col-xs-12 col-lg-offset-1 pull-right">
+                        <div class="contact_us">
+                            <h4>CHÍNH SÁCH :</h4>
+                            <a href="cc_quydinhchung.html"><b>QUY ĐỊNH CHUNG</b></a>
+                            <a href="cc_hoatdong.html"><b>HOẠT ĐỘNG</b></a>
+                              <a href="cc_baomatthongtin.html"><b>BẢO MẬT THÔNG TIN</b></a>
+                           <a href="cc_lienhe.html"><b>LIÊN HỆ</b></a></br>
+                           </br></br>Copyright &copy; 2018 STU Việt Nam
+                           
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-4 col-xs-12 pull-right">
+                        <div class="basic_info">
+                            <a href="index.html"><img class="footer_logo" src="images/200px-KFC_LOGO.png" alt="Burger" /></a>
+
+                            <ul class="list-inline social">
+                                <li><a href="https://www.facebook.com/KFCVietnam/" class="fa fa-facebook"></a></li>
+                                <li><a href="https://twitter.com/kfc" class="fa fa-twitter"></a></li>
+                                <li><a href="https://www.instagram.com/kfc/" class="fa fa-instagram"></a></li>
+                            </ul>
+
+                            <div class="footer-copyright">
+                                <p class="wow fadeInRight" data-wow-duration="1s">
+                                    đươc làm 
+                                    <i class="fa fa-heart"></i>
+                                    bởi 
+                                  <a target="_blank" href="http://bootstrapthemes.co">Bootstrap Themes</a> <br /> 
+                                    2016. Đã đăng ký bản quyền
+
+                              </p>
+                            </div>					
+                        </div>
+                    </div>
+
+                </div>
+            </div><!-- Container end -->
+        </footer><!-- Footer end -->
+
+
+        <!-- scroll up-->
+        <div class="scrollup" style="z-index:222222;">
+            <a href="#"><i class="fa fa-chevron-up"></i></a>
+        </div><!-- End off scroll up->
+
+        <!-- JavaScript -->
+        <script language="javascript" src="js/clock.js"></script>
+     
+		<!--   Javascrip Menu !-->
+        <script src="js/jquery-1.12.1.min.js"></script>		
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Bootsnav js -->
+        <script src="js/bootsnav.js"></script>
+
+        <!-- JS Implementing Plugins -->
+        <script src="js/google_map.js"></script>
+        <script src="js/gmaps.min.js"></script>
+		<script src="js/jquery.js"> </script>
+<script src="js/new-snofall.js"></script>
+        <script type="text/javascript">
+            var map;
+            $(document).ready(function () {
+                map = new GMaps({
+                    el: '#ourmaps',
+                    lat: 3.139003,
+                    lng: 101.686855,
+                    scrollwheel: false
+                });
+
+                //locations request
+                map.getElevations({
+                    locations: [[3.139003, 101.686855]],
+                    callback: function (result, status) {
+                        if (status == google.maps.ElevationStatus.OK) {
+                            for (var i in result) {
+                                map.addMarker({
+                                    lat: result[i].location.lat(),
+                                    lng: result[i].location.lng(),
+                                    infoWindow: {
+                                        content: '<address class="tooltip_address"><b>Junky Burger</b><br />Jalan Awan Hijau, Taman OUG<br />58200 Kuala Lumpur <br />Malaysia <br /></address>'
+                                    }
+                                });
+                            }
+                        }
+                    }
+                });
+
+            });
+			
+
+$(document).ready( function(){
+$.fn.snow({ minSize: 10, maxSize: 50, newOn: 400, flakeColor: '#ffffff' });
+});
+        </script>
+		
+
+        <!--main js-->
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>	
+<!-- InstanceEnd --></html>	

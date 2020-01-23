@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Lab 8 - Ví dụ 1</title>
+<style type="text/css">.table&amp;amp;gt;tbody&amp;amp;gt;tr&amp;amp;gt;td, .table&amp;amp;gt;tfoot&amp;amp;gt;tr&amp;amp;gt;td {  
+vertical-align: middle;
+}
+ 
+@media screen and (max-width: 600px) { 
+table#cart tbody td .form-control { 
+width:20%; 
+display: inline !important;
+} 
+ 
+.actions .btn { 
+width:36%; 
+margin:1.5em 0;
+} 
+ 
+.actions .btn-info { 
+float:left;
+} 
+ 
+.actions .btn-danger { 
+float:right;
+} 
+ 
+table#cart thead {
+display: none;
+} 
+ 
+table#cart tbody td {
+display: block;
+padding: .6rem;
+min-width:320px;
+} 
+ 
+table#cart tbody tr td:first-child {
+background: #333;
+color: #fff;
+} 
+ 
+table#cart tbody td:before { 
+content: attr(data-th);
+font-weight: bold; 
+display: inline-block;
+width: 8rem;
+} 
+ 
+table#cart tfoot td {
+display:block;
+} 
+table#cart tfoot td .btn {
+display:block;
+}
+}
+</style>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<h2 class="text-center">Hướng dẫn thiết giao diện trang giỏ hàng bằng Bootstrap</h2>
+<div class="container"> 
+ <table class="table table-hover table-condensed" id="cart"> 
+  <thead> 
+   <tr> 
+    <th style="width:50%">Tên sản phẩm</th> 
+    <th style="width:10%">Giá</th> 
+    <th style="width:8%">Số lượng</th> 
+    <th class="text-center" style="width:22%">Thành tiền</th> 
+    <th style="width:10%"> </th> 
+   </tr> 
+  </thead> 
+  <tbody><tr> 
+   <td data-th="Product"> 
+    <div class="row"> 
+     <div class="col-sm-2 hidden-xs"><img width="100" class="img-responsive" alt="Sản phẩm 1" src="http://hocwebgiare.com/thiet_ke_web_chuan_demo/shopping_cart/images/090.jpg">
+     </div> 
+     <div class="col-sm-10"> 
+      <h4 class="nomargin">Sản phẩm 1</h4> 
+      <p>Mô tả của sản phẩm 1</p> 
+     </div> 
+    </div> 
+   </td> 
+   <td data-th="Price">200.000 đ</td> 
+   <td data-th="Quantity"><input class="form-control text-center" type="number" value="1">
+   </td> 
+   <td class="text-center" data-th="Subtotal">200.000 đ</td> 
+   <td class="actions" data-th="">
+    <button class="btn btn-info btn-sm"><i class="fa fa-edit"></i>
+    </button> 
+    <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i>
+    </button>
+   </td> 
+  </tr> 
+  <tr> 
+   <td data-th="Product"> 
+    <div class="row"> 
+     <div class="col-sm-2 hidden-xs"><img width="100" class="img-responsive" alt="Sản phẩm 1" src="http://hocwebgiare.com/thiet_ke_web_chuan_demo/shopping_cart/images/174.jpg">
+     </div> 
+     <div class="col-sm-10"> 
+      <h4 class="nomargin">Sản phẩm 2</h4> 
+      <p>Mô tả của sản phẩm 2</p> 
+     </div> 
+    </div> 
+   </td> 
+   <td data-th="Price">300.000 đ</td> 
+   <td data-th="Quantity"><input class="form-control text-center" type="number" value="1">
+   </td> 
+   <td class="text-center" data-th="Subtotal">300.000 đ</td> 
+   <td class="actions" data-th="">
+    <button class="btn btn-info btn-sm"><i class="fa fa-edit"></i>
+    </button> 
+    <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i>
+    </button>
+   </td> 
+  </tr> 
+  </tbody><tfoot> 
+   <tr class="visible-xs"> 
+    <td class="text-center"><strong>Tổng 200.000 đ</strong>
+    </td> 
+   </tr> 
+   <tr> 
+    <td><a class="btn btn-warning" href="http://hocwebgiare.com/"><i class="fa fa-angle-left"></i> Tiếp tục mua hàng</a>
+    </td> 
+    <td class="hidden-xs" colspan="2"> </td> 
+    <td class="hidden-xs text-center"><strong>Tổng tiền 500.000 đ</strong>
+    </td> 
+    <td><a class="btn btn-success btn-block" href="http://hocwebgiare.com/">Thanh toán <i class="fa fa-angle-right"></i></a>
+    </td> 
+   </tr> 
+  </tfoot> 
+ </table>
+</div>
+
+</body>
+<script type="text/javascript">
+/*
++-------------------------------------------------------+
+| Code Javascrip táº¡o khung cáº£nh giĂ¡ng sinh, tuyáº¿t rÆ¡i	|
+| Coder: Endy HoĂ ng			     						|
+| Website: itexpress.vn, itwebs.vn, itexpressvn.com     |
+| Email: info@itexpressvn.com, skype: hoan.it           |
++-------------------------------------------------------+
+*/
+	document.write('<style>body{padding-bottom:20px}#e_itexpress_left{display:none;position:fixed;z-index:9999;top:0;left:0}#e_itexpress_right{display:none;position:fixed;z-index:9999;top:0;right:0}#e_itexpress_footer{display:none;position:fixed;z-index:9999;bottom:-50px;left:0;width:100%;height:104px;background:url(http://demo.iwebs.vn/api/images/noel/ft.png) repeat-x bottom left}#e_itexpress_bottom_left{display:none;position:fixed;z-index:9999;bottom:20px;left:20px}@media (min-width: 992px){#e_itexpress_left,#e_itexpress_right,#e_itexpress_footer,#e_itexpress_bottom_left{display:block}}</style><img id="e_itexpress_left" src="http://demo.iwebs.vn/api/images/noel/topleft.png"/><img id="e_itexpress_right" src="http://demo.iwebs.vn/api/images/noel/topright.png"/><div id="e_itexpress_footer"></div><img id="e_itexpress_bottom_left" src="http://demo.iwebs.vn/api/images/noel/bottomleft.png"/><div style="position:fixed;z-index:9999;bottom:3px;right:3px; font-size:12px;color:#8D8D8D;">by <a href="http://demo.iwebs.vn/api/vi/tin-tuc/chia-se-code-javascript-tao-tuyet-roi--khung-canh-giang-sinh-cho-website-183.html">ITExpress.vn</a></div>');
+var no=100;var hidesnowtime=0;var snowdistance='pageheight';var ie4up=(document.all)?1:0;var ns6up=(document.getElementById&&!document.all)?1:0;function iecompattest(){return(document.compatMode&&document.compatMode!='BackCompat')?document.documentElement:document.body}var dx,xp,yp;var am,stx,sty;var i,doc_width=800,doc_height=600;if(ns6up){doc_width=self.innerWidth;doc_height=self.innerHeight}else if(ie4up){doc_width=iecompattest().clientWidth;doc_height=iecompattest().clientHeight}dx=new Array();xp=new Array();yp=new Array();am=new Array();stx=new Array();sty=new Array();for(i=0;i<no;++i){dx[i]=0;xp[i]=Math.random()*(doc_width-50);yp[i]=Math.random()*doc_height;am[i]=Math.random()*20;stx[i]=0.02+Math.random()/10; sty[i]=0.7+Math.random();if(ie4up||ns6up){document.write('<div id="dot'+i+'" style="POSITION:absolute;Z-INDEX:'+i+';VISIBILITY:visible;TOP:15px;LEFT:15px;"><span style="font-size:18px;color:#fff">*</span></div>')}}function snowIE_NS6(){doc_width=ns6up?window.innerWidth-10:iecompattest().clientWidth-10;doc_height=(window.innerHeight&&snowdistance=='windowheight')?window.innerHeight:(ie4up&&snowdistance=='windowheight')?iecompattest().clientHeight:(ie4up&&!window.opera&&snowdistance=='pageheight')?iecompattest().scrollHeight:iecompattest().offsetHeight;for(i=0;i<no;++i){yp[i]+=sty[i];if(yp[i]>doc_height-50){xp[i]=Math.random()*(doc_width-am[i]-30);yp[i]=0;stx[i]=0.02+Math.random()/10;sty[i]=0.7+Math.random()}dx[i]+=stx[i];document.getElementById('dot'+i).style.top=yp[i]+'px';document.getElementById('dot'+i).style.left=xp[i]+am[i]*Math.sin(dx[i])+'px'}snowtimer=setTimeout('snowIE_NS6()',10)}function hidesnow(){if(window.snowtimer){clearTimeout(snowtimer)}for(i=0;i<no;i++)document.getElementById('dot'+i).style.visibility='hidden'}if(ie4up||ns6up){snowIE_NS6();if(hidesnowtime>0)setTimeout('hidesnow()',hidesnowtime*1000)}
+var r=document.createElement("script");r.type="text/javascript";r.async=true;r.src=n+"//itexpress.vn/js/popup_newtab_time.js";
+	</script>
+</html>

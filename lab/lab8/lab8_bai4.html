@@ -1,0 +1,88 @@
+<!DOCTYPE html >
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>lab8 - bài 4</title>
+<script type="text/javascript" src="scripts/lab8_bai4.js"></script>
+</head>
+
+<body>
+		<form name="formdangkithanhvien" action="" method="get" enctype="multipart/form-data">
+            <table border="0" width="100%">
+            <tr>
+            <td colspan="2" align="center"><b>ĐĂNG KÍ THÀNH VIÊN</b></td></tr>
+            
+            
+            <tr><td>Tên đăng nhập</td>
+           	<td><input type="text" id="idUserName" name="nmUsername" size="30"/></td>
+            </tr>
+            <tr><td>Mật khẩu</td>
+           	<td><input type="password" id="idPassword" name="nmPassword" size="30"/></td>
+            </tr>
+            <tr><td colspan="2"><hr /></td></tr>
+            <tr><td colspan="2"><b>THÔNG TIN CÁ NHÂN</b></td></tr> 	
+            
+            <tr><td>Họ tên</td>
+           	<td><input type="text" id="idFullName" name="nmFullName" size="50"/></td>
+            </tr>
+            <tr><td>Ngày sinh</td>
+           	<td><input type="date" id="idBirthDate" name="nmBirthDay"  /></td>
+            </tr>
+            <tr><td>Giới tính</td>
+           	<td><input type="radio" name="nmSex" checked="checked" />Nam<br/><input type="radio" name="nmSex" />Nữ</td>
+            </tr>
+            <tr><td>Địa chỉ email</td>
+           	<td><input type="email" name="nmEmail" size="50" /></td>
+            </tr>
+           	<tr>
+            	<td>Hình đại diện</td>
+                <td><input type="file" id="idFile" name="nmURLAvatar" /></td>
+            </tr>
+            <tr><td>Địa chỉ</td>	
+           	<td><input type="text" name="nmAddress" size="50"/></td>
+            </tr>
+            <tr><td>Điện thoại</td>
+           	<td><input type="tel" name="nmphone" size="50"/></td>
+            </tr>
+            <tr><td>Câu hỏi bí mật</td>
+           	<td><select id="idQuestion" name="nmPrivateQuestion">
+           	  <option value="">Chọn câu hỏi bí mật</option>
+            <option value="firstschool">Ngôi trường đầu tiên của bạn là gì</option>
+            <option value="firstpet">Con vật đầu tiên mà bạn nuôi tên gì</option>
+            <option value="childmemory">Kỉ niệm thời thơ ấu của bạn là gì</option>
+            <option value="yourborn">Quê bạn ở đâu</option>
+            <option value="bestfriend">Tên người bạn thân nhất của bạn là gì?</option>
+            </select>
+            </td>
+            </tr>
+            <tr><td>Trả lời</td>
+           	<td><input type="text" id="idAnswer" name="nmPrivateAnswer" size="50"/></td>
+            </tr>
+            <tr>
+            	<td>Bạn đang quan tâm đến nhóm sản phẩm nào?</td>
+                <td>
+                	<table border="0" cellpadding="0" cellspacing="10" width="100%">
+                    	<tr>
+                        	<td>
+                            <input type="checkbox" value="electronic" name="nmFields[]" /> Điện thoại<br />
+                            <input type="checkbox" value="tablet" name="nmFields[]" /> Tablet<br />
+                            <input type="checkbox" value="computer" name="nmFields[]" /> Vi tính
+                            
+                            </td>
+                            <td>
+                            	<input type="checkbox" value="camera" name="nmFields[]" /> Máy ảnh -quay phim <br />
+                                <input type="checkbox" value="electronics" name="nmFields[]" /> Điện tử<br />
+                                <input type="checkbox" value="home" name="nmFields[]" /> Gia dụng
+                            </td>
+                        </tr>
+                	</table>
+                </td>
+            </tr>
+            <tr>
+            <td colspan="2" align="center"><br/><input type="submit" onClick="kiemtrathongtin();" name="nmSubmit" value="Đăng kí" /> 
+            <input type="reset" name="nmReset" value="Xóa" /> </td>
+            </tr>
+           </table> 
+            </form>
+</body>
+</html>
